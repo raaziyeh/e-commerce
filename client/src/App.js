@@ -4,7 +4,6 @@ import Products from "./pages/products/Products"
 import Product from "./pages/product/Product"
 import Navbar from "./components/navbar/Navbar"
 import Footer from "./components/footer/Footer"
-import { Children } from "react"
 import "./app.scss"
 
 const Layout = () => {
