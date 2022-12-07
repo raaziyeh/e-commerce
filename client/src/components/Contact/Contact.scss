@@ -1,0 +1,56 @@
+.contact {
+	width: 100%;
+	padding: 15px 20vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #2879fe;
+	color: white;
+	margin-top: 130px;
+	margin-bottom: 50px;
+
+	span {
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	form {
+		height: 32px;
+		display: flex;
+		align-items: center;
+		gap: 0;
+
+		input {
+			height: 100%;
+			padding: 10px 5px;
+			border-radius: 4px 0 0 4px;
+			border: none;
+			outline: none;
+			width: 220px;
+		}
+
+		button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			padding: 10px 10px;
+			background-color: #333;
+			color: white;
+			border-radius: 0 4px 4px 0;
+			font-size: 13px;
+			border: none;
+			cursor: pointer;
+		}
+	}
+
+	.socials {
+		display: flex;
+		gap: 10px;
+
+		.icon {
+			font-size: 20px;
+			cursor: pointer;
+		}
+	}
+}
