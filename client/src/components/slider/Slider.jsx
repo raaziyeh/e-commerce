@@ -15,11 +15,11 @@ const Slider = () => {
 	]
 
 	const nextSlide = () => {
-		setCurrentSlideIndex((prev) => (prev == images.length - 1 ? 0 : prev + 1))
+		setCurrentSlideIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
 	}
 
 	const prevSlide = () => {
-		setCurrentSlideIndex((prev) => (prev == 0 ? images.length - 1 : prev - 1))
+		setCurrentSlideIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
 	}
 
 	return (
