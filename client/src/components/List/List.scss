@@ -1,0 +1,9 @@
+.list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	.list-card {
+		width: 250px;
+	}
+}

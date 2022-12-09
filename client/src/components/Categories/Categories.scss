@@ -33,6 +33,12 @@
 			font-weight: bold;
 			text-transform: uppercase;
 			cursor: pointer;
+			transition: all 0.2s ease;
+
+			&:hover {
+				background-color: #2879fe;
+				color: white;
+			}
 		}
 
 		&:nth-child(1) {

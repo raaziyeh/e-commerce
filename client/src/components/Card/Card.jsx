@@ -1,8 +1,10 @@
 import "./Card.scss"
 
-const Card = ({ item }) => {
+const Card = ({ item, className }) => {
+	const classNamePhrase = className ? "card " + className : "card"
+
 	return (
-		<div className="card">
+		<div className={classNamePhrase}>
 			{item.new && <span className="badge">New Season</span>}
 			<div className="images">
 				<div className="container">

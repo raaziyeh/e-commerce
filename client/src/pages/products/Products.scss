@@ -1,0 +1,49 @@
+.products {
+	padding: 30px 50px;
+	display: flex;
+
+	.left {
+		flex: 1;
+		position: sticky;
+		height: 100%;
+		top: 50px;
+
+		.filter-item {
+			margin-bottom: 30px;
+
+			h2 {
+				margin-bottom: 20px;
+				font-weight: 400;
+				font-size: 24px;
+			}
+
+			.input-item {
+				margin-bottom: 10px;
+
+				label {
+					margin-left: 10px;
+				}
+
+				.range-input {
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	.right {
+		flex: 3;
+
+		.top {
+			height: 200px;
+			margin-bottom: 50px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
