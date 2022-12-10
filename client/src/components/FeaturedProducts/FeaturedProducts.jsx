@@ -1,5 +1,6 @@
-import "./FeaturedProducts.scss"
+import { Link } from "react-router-dom"
 import Card from "../Card/Card"
+import "./FeaturedProducts.scss"
 
 const FeaturedProducts = ({ title }) => {
 	//temporary
@@ -41,6 +42,7 @@ const FeaturedProducts = ({ title }) => {
 			new: false,
 		},
 	]
+
 	return (
 		<div className="featured-products">
 			<div className="top">
@@ -53,7 +55,11 @@ const FeaturedProducts = ({ title }) => {
 			</div>
 			<div className="bottom">
 				{products.map((product) => (
-					<Card item={product} />
+					<div key={product.id}>
+						<Link to={`/product/${product.id}`}>
+							<Card item={product} />
+						</Link>
+					</div>
 				))}
 			</div>
 		</div>

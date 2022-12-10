@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Card from "../Card/Card"
 import "./List.scss"
 
@@ -40,10 +41,15 @@ const List = () => {
 			new: false,
 		},
 	]
+
 	return (
 		<div className="list">
 			{data.map((item) => (
-				<Card item={item} key={item.id} className="list-card" />
+				<div>
+					<Link to={`/product/${item.id}`}>
+						<Card item={item} key={item.id} className="list-card" />
+					</Link>
+				</div>
 			))}
 		</div>
 	)
