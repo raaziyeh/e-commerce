@@ -1,4 +1,4 @@
-import DeleteIcon from "@mui/icons-material/Delete"
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline"
 import "./Cart.scss"
 
 const Cart = () => {
@@ -43,7 +43,7 @@ const Cart = () => {
 									<span>1</span> × $<span>32</span>
 								</div>
 							</div>
-							<DeleteIcon className="delete" />
+							<DeleteOutlineIcon className="delete" />
 						</div>
 					)
 				})}
