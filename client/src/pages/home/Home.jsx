@@ -7,9 +7,15 @@ const Home = () => {
 	return (
 		<div className="home">
 			<Slider />
-			<FeaturedProducts title="featured" />
+			<div id="featured">
+				<FeaturedProducts title="featured" />
+			</div>
+
 			<Categories />
-			<FeaturedProducts title="trending" />
+			<div id="sale">
+				<FeaturedProducts title="Sale" />
+			</div>
+
 			<Contact />
 		</div>
 	)

@@ -11,7 +11,7 @@ const Categories = () => {
 				/>
 				<button>
 					<Link className="link" to="/products/1">
-						Sale
+						Trending
 					</Link>
 				</button>
 			</div>
