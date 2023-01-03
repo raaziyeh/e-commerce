@@ -41,6 +41,24 @@ const FeaturedProducts = ({ title }) => {
 			price: 32,
 			new: false,
 		},
+		{
+			id: 5,
+			title: "sweatpants and sweatshirt",
+			img: "https://images.pexels.com/photos/6311646/pexels-photo-6311646.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+			img2: "https://images.pexels.com/photos/6311642/pexels-photo-6311642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+			oldPrice: 47,
+			price: 32,
+			new: false,
+		},
+		{
+			id: 6,
+			title: "sweatpants and sweatshirt",
+			img: "https://images.pexels.com/photos/6311646/pexels-photo-6311646.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+			img2: "https://images.pexels.com/photos/6311642/pexels-photo-6311642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+			oldPrice: 47,
+			price: 32,
+			new: false,
+		},
 	]
 
 	return (
@@ -57,7 +75,7 @@ const FeaturedProducts = ({ title }) => {
 				{products.map((product) => (
 					<div key={product.id}>
 						<Link to={`/product/${product.id}`}>
-							<Card item={product} />
+							<Card item={product} className="custom-card" />
 						</Link>
 					</div>
 				))}
