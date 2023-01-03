@@ -1,6 +1,6 @@
 .contact {
 	width: 100%;
-	padding: 15px 20vw;
+	padding: 15px 15vw;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -52,5 +52,25 @@
 			font-size: 20px;
 			cursor: pointer;
 		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.contact {
+		padding: 20px 5vw;
+	}
+}
+
+@media (max-width: 900px) {
+	.hidden-900 {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.contact {
+		padding: 30px;
+		flex-direction: column;
+		gap: 20px;
 	}
 }

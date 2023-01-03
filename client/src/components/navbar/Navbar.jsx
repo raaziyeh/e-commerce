@@ -96,10 +96,13 @@ const Navbar = () => {
 				)}
 
 				{/* Mobile Nav */}
-				<div
-					className={`${openMobileNav ? "nav-backdrop" : "mobileNav-wrapper"}`}
-					onClick={closeMobileNav}
-				>
+				<>
+					<div
+						className={`${
+							openMobileNav ? "nav-backdrop" : "mobileNav-wrapper"
+						}`}
+						onClick={closeMobileNav}
+					/>
 					<div
 						className="mobile-nav"
 						style={openMobileNav ? { right: "0" } : { right: "-100%" }}
@@ -156,7 +159,7 @@ const Navbar = () => {
 							</div>
 						</div>
 					</div>
-				</div>
+				</>
 			</div>
 		</>
 	)

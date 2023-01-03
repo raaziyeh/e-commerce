@@ -9,7 +9,7 @@ import "./Contact.scss"
 const Contact = () => {
 	return (
 		<div className="contact">
-			<span>BE IN TOUCH WITH US</span>
+			<span className="hidden-900">BE IN TOUCH WITH US</span>
 			<form>
 				<input type="email" placeholder="Enter your email" />
 				<button>JOIN US</button>
