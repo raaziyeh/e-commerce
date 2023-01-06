@@ -1,5 +1,5 @@
 .footer {
-	padding: 50px 90px 30px 90px;
+	padding: 80px 90px 30px 90px;
 
 	.top {
 		display: grid;
@@ -88,6 +88,21 @@
 				&:nth-child(2) {
 					grid-column-start: 1;
 					grid-column-end: 3;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.footer {
+		.bottom {
+			.left {
+				span {
+					display: block;
+					&:first-child {
+						padding-bottom: 10px;
+					}
 				}
 			}
 		}

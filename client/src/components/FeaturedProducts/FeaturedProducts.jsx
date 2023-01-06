@@ -75,7 +75,7 @@ const FeaturedProducts = ({ title }) => {
 				{products.map((product) => (
 					<div key={product.id}>
 						<Link to={`/product/${product.id}`}>
-							<Card item={product} className="custom-card" />
+							<Card item={product} className="featured-card" />
 						</Link>
 					</div>
 				))}

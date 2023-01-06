@@ -12,10 +12,12 @@ const Card = ({ item, className }) => {
 					<img src={item.img2} alt="card-img" />
 				</div>
 			</div>
-			<h3>{item.title}</h3>
-			<div className="prices">
-				<span>${item.oldPrice}</span>
-				<span>${item.price}</span>
+			<div>
+				<h3>{item.title}</h3>
+				<div className="prices">
+					<span>${item.oldPrice}</span>
+					<span>${item.price}</span>
+				</div>
 			</div>
 		</div>
 	)

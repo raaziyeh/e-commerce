@@ -119,25 +119,25 @@ const Navbar = () => {
 									<ArrowForwardIosOutlinedIcon className="icon" />
 								</HashLink>
 							</div>
-							<div className="link">
+							<div className="link" onClick={closeMobileNav}>
 								<Link to="/products/women">
 									<span>Women</span>
 									<ArrowForwardIosOutlinedIcon className="icon" />
 								</Link>
 							</div>
-							<div className="link">
+							<div className="link" onClick={closeMobileNav}>
 								<Link to="products/men">
 									<span>Men</span>
 									<ArrowForwardIosOutlinedIcon className="icon" />
 								</Link>
 							</div>
-							<div className="link">
+							<div className="link" onClick={closeMobileNav}>
 								<Link to="products/kids">
 									<span>Kids</span>
 									<ArrowForwardIosOutlinedIcon className="icon" />
 								</Link>
 							</div>
-							<div className="link">
+							<div className="link" onClick={closeMobileNav}>
 								<HashLink to="/#sale">
 									<span>Sale</span>
 									<ArrowForwardIosOutlinedIcon className="icon" />

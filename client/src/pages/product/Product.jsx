@@ -16,6 +16,10 @@ const Product = () => {
 
 	return (
 		<div className="product">
+			<div className="mobile-title">
+				<h1>Sweatpants and Sweatshirt</h1>
+				<span className="price">$19.9</span>
+			</div>
 			<div className="left">
 				<div className="images">
 					{images.map((img, index) => {
@@ -34,8 +38,8 @@ const Product = () => {
 				</div>
 			</div>
 			<div className="right">
-				<h1>Sweatpants and Sweatshirt</h1>
-				<span className="price">$19.9</span>
+				<h1 className="hide-800">Sweatpants and Sweatshirt</h1>
+				<span className="price hide-800">$19.9</span>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -64,11 +68,11 @@ const Product = () => {
 				</button>
 				<div className="more-actions">
 					<div>
-						<FavoriteBorderIcon />
+						<FavoriteBorderIcon className="icon" />
 						<span>ADD TO WISH LIST</span>
 					</div>
 					<div>
-						<CompareIcon />
+						<CompareIcon className="icon" />
 						<span>ADD TO COMPARE</span>
 					</div>
 				</div>
