@@ -12,11 +12,13 @@ import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined"
 import StoreOutlinedIcon from "@mui/icons-material/StoreOutlined"
 import HeadsetMicOutlinedIcon from "@mui/icons-material/HeadsetMicOutlined"
 import Cart from "../Cart/Cart"
+import { useSelector } from "react-redux"
 import "./Navbar.scss"
 
 const Navbar = () => {
 	const [openCart, setOpenCart] = useState(false)
 	const [openMobileNav, setOpenMobileNav] = useState(false)
+	const cartProducts = useSelector((state) => state.cart.products)
 
 	const closeMobileNav = () => {
 		setOpenMobileNav(false)
@@ -80,7 +82,7 @@ const Navbar = () => {
 							onClick={() => setOpenCart((prev) => !prev)}
 						>
 							<ShoppingCartOutlinedIcon />
-							<span>0</span>
+							<span>{cartProducts.length}</span>
 						</div>
 						<div className="burger-menu nav-icon" onClick={toggleMobileNav}>
 							<MenuIcon />

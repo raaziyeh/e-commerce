@@ -5,7 +5,7 @@
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 20px;
 
 	.cart-header {
 		color: gray;
@@ -107,6 +107,21 @@
 			color: red;
 			font-size: 12px;
 			cursor: pointer;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.cart {
+		width: 300px;
+		padding: 12px;
+
+		.cart-body {
+			.cart-details {
+				.name {
+					font-size: 16px;
+				}
+			}
 		}
 	}
 }

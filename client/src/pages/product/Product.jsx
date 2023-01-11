@@ -2,9 +2,13 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"
 import CompareIcon from "@mui/icons-material/Compare"
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart"
 import { useState } from "react"
+import { useDispatch } from "react-redux"
+import { addToCart } from "../../redux/cartReducer"
 import "./Product.scss"
 
 const Product = () => {
+	const dispatch = useDispatch()
+
 	// Temporary
 	const images = [
 		"https://images.pexels.com/photos/6311646/pexels-photo-6311646.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -62,7 +66,21 @@ const Product = () => {
 						+
 					</button>
 				</div>
-				<button className="add-to-cart">
+				<button
+					className="add-to-cart"
+					onClick={() =>
+						dispatch(
+							addToCart({
+								id: 1,
+								title: "Sweatpants and Sweatshirt",
+								price: 19.9,
+								quantity,
+								img: images[0],
+								desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
+							})
+						)
+					}
+				>
 					<AddShoppingCartIcon />
 					ADD TO CART
 				</button>
