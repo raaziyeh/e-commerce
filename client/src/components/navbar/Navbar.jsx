@@ -16,30 +16,25 @@ import { useSelector } from "react-redux"
 import "./Navbar.scss"
 
 const Navbar = () => {
-	const [openCart, setOpenCart] = useState(false)
-	const [openMobileNav, setOpenMobileNav] = useState(false)
+	const [isCartOpen, setIsCartOpen] = useState(false)
+	const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
 	const cartProducts = useSelector((state) => state.cart.products)
 
 	const closeMobileNav = () => {
-		setOpenMobileNav(false)
+		setIsMobileNavOpen(false)
 	}
 
-	const toggleMobileNav = () => {
-		setOpenMobileNav((prev) => {
-			if (!prev) {
-				setOpenCart(false)
-			}
-			return !prev
-		})
+	const openMobileNav = () => {
+		setIsMobileNavOpen(true)
 	}
 
 	useEffect(() => {
-		if (openMobileNav) {
+		if (isMobileNavOpen) {
 			document.body.classList.add("overflowHidden")
 		} else {
 			document.body.classList.remove("overflowHidden")
 		}
-	}, [openMobileNav])
+	}, [isMobileNavOpen])
 
 	return (
 		<>
@@ -79,19 +74,19 @@ const Navbar = () => {
 						</div>
 						<div
 							className="cart-icon nav-icon"
-							onClick={() => setOpenCart((prev) => !prev)}
+							onClick={() => setIsCartOpen((prev) => !prev)}
 						>
 							<ShoppingCartOutlinedIcon />
 							<span>{cartProducts.length}</span>
 						</div>
-						<div className="burger-menu nav-icon" onClick={toggleMobileNav}>
+						<div className="burger-menu nav-icon" onClick={openMobileNav}>
 							<MenuIcon />
 						</div>
 					</div>
 				</div>
 
 				{/* Cart */}
-				{openCart && (
+				{isCartOpen && (
 					<div className="cart-container">
 						<Cart />
 					</div>
@@ -101,13 +96,13 @@ const Navbar = () => {
 				<>
 					<div
 						className={`${
-							openMobileNav ? "nav-backdrop" : "mobileNav-wrapper"
+							isMobileNavOpen ? "nav-backdrop" : "mobileNav-wrapper"
 						}`}
 						onClick={closeMobileNav}
 					/>
 					<div
 						className="mobile-nav"
-						style={openMobileNav ? { right: "0" } : { right: "-100%" }}
+						style={isMobileNavOpen ? { right: "0" } : { right: "-100%" }}
 					>
 						<div className="top">
 							<div className="close" onClick={closeMobileNav}>
