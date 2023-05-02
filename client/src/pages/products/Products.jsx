@@ -9,11 +9,7 @@ const Products = () => {
 	const [maxPrice, setMaxPrice] = useState(1000)
 	const [sort, setSort] = useState(null)
 	const [showFilters, setShowFilters] = useState(false)
-	const categoryId = parseInt(useParams().id)
-
-	// temporary
-	const headerImg =
-		"https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=600"
+	const categoryId = useParams().id
 
 	return (
 		<div className="products">
@@ -76,7 +72,7 @@ const Products = () => {
 			<div className="right">
 				<div className="top display-none-1024">
 					<img
-						src={headerImg}
+						src="/img/header-img.jpg"
 						alt="cloth-category"
 						className="products-header-img"
 					/>

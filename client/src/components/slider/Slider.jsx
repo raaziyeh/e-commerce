@@ -6,12 +6,10 @@ import "./Slider.scss"
 const Slider = () => {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
 	const images = [
-		"https://images.pexels.com/photos/1549200/pexels-photo-1549200.jpeg?auto=compress&cs=tinysrgb&w=1600",
-		"https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&w=1600",
-		"https://images.pexels.com/photos/837140/pexels-photo-837140.jpeg?auto=compress&cs=tinysrgb&w=1600",
-		"https://images.pexels.com/photos/2310609/pexels-photo-2310609.jpeg?auto=compress&cs=tinysrgb&w=600",
-		"https://images.pexels.com/photos/7622723/pexels-photo-7622723.jpeg?auto=compress&cs=tinysrgb&w=600",
-		"https://images.pexels.com/photos/35188/child-childrens-baby-children-s.jpg?auto=compress&cs=tinysrgb&w=600",
+		"./img/slider_4.jpeg",
+		"./img/slider_1.jpeg",
+		"./img/slider_2.jpeg",
+		"./img/slider_3.jpeg",
 	]
 
 	const nextSlide = () => {

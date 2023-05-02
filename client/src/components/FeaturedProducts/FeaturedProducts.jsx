@@ -1,65 +1,20 @@
 import { Link } from "react-router-dom"
 import Card from "../Card/Card"
 import "./FeaturedProducts.scss"
+import { useEffect, useState } from "react"
 
 const FeaturedProducts = ({ title }) => {
-	//temporary
-	const products = [
-		{
-			id: 1,
-			title: "sweatpants and sweatshirt",
-			img: "https://images.pexels.com/photos/6311646/pexels-photo-6311646.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-			img2: "https://images.pexels.com/photos/6311642/pexels-photo-6311642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-			oldPrice: 47,
-			price: 32,
-			new: true,
-		},
-		{
-			id: 2,
-			title: "sweatpants and sweatshirt",
-			img: "https://images.pexels.com/photos/6311646/pexels-photo-6311646.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-			img2: "https://images.pexels.com/photos/6311642/pexels-photo-6311642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-			oldPrice: 47,
-			price: 32,
-			new: true,
-		},
-		{
-			id: 3,
-			title: "sweatpants and sweatshirt",
-			img: "https://images.pexels.com/photos/6311646/pexels-photo-6311646.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-			img2: "https://images.pexels.com/photos/6311642/pexels-photo-6311642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-			oldPrice: 47,
-			price: 32,
-			new: false,
-		},
-		{
-			id: 4,
-			title: "sweatpants and sweatshirt",
-			img: "https://images.pexels.com/photos/6311646/pexels-photo-6311646.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-			img2: "https://images.pexels.com/photos/6311642/pexels-photo-6311642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-			oldPrice: 47,
-			price: 32,
-			new: false,
-		},
-		{
-			id: 5,
-			title: "sweatpants and sweatshirt",
-			img: "https://images.pexels.com/photos/6311646/pexels-photo-6311646.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-			img2: "https://images.pexels.com/photos/6311642/pexels-photo-6311642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-			oldPrice: 47,
-			price: 32,
-			new: false,
-		},
-		{
-			id: 6,
-			title: "sweatpants and sweatshirt",
-			img: "https://images.pexels.com/photos/6311646/pexels-photo-6311646.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-			img2: "https://images.pexels.com/photos/6311642/pexels-photo-6311642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-			oldPrice: 47,
-			price: 32,
-			new: false,
-		},
-	]
+	const [products, setProducts] = useState([])
+
+	useEffect(() => {
+		async function getProducts() {
+			const response = await fetch(`http://localhost:3004/${title}`)
+			const data = await response.json()
+			setProducts(data)
+		}
+
+		getProducts()
+	}, [title])
 
 	return (
 		<div className="featured-products">
@@ -72,7 +27,7 @@ const FeaturedProducts = ({ title }) => {
 				</p>
 			</div>
 			<div className="bottom">
-				{products.map((product) => (
+				{products.length !== 0 && products.map((product) => (
 					<div key={product.id}>
 						<Link to={`/product/${product.id}`}>
 							<Card item={product} className="featured-card" />

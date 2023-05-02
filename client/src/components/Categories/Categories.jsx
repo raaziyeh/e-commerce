@@ -6,8 +6,8 @@ const Categories = () => {
 		<div className="categories">
 			<div>
 				<img
-					src="https://images.pexels.com/photos/818992/pexels-photo-818992.jpeg?auto=compress&cs=tinysrgb&w=1600"
-					alt="sale-category"
+					src="./img/trending_category.jpeg"
+					alt="trending-category"
 				/>
 				<button>
 					<Link className="link" to="/products/1">
@@ -17,7 +17,7 @@ const Categories = () => {
 			</div>
 			<div>
 				<img
-					src="https://images.pexels.com/photos/2036646/pexels-photo-2036646.jpeg?auto=compress&cs=tinysrgb&w=1600"
+					src="./img/women_category.jpeg"
 					alt="women-category"
 				/>
 				<button>
@@ -28,7 +28,7 @@ const Categories = () => {
 			</div>
 			<div>
 				<img
-					src="https://images.pexels.com/photos/1813947/pexels-photo-1813947.jpeg?auto=compress&cs=tinysrgb&w=1600"
+					src="./img/season_category.jpeg"
 					alt="season-category"
 				/>
 				<button>
@@ -39,7 +39,7 @@ const Categories = () => {
 			</div>
 			<div>
 				<img
-					src="https://images.pexels.com/photos/1192609/pexels-photo-1192609.jpeg?auto=compress&cs=tinysrgb&w=1600"
+					src="./img/men_category.jpeg"
 					alt="men-category"
 				/>
 				<button>
@@ -50,22 +50,22 @@ const Categories = () => {
 			</div>
 			<div>
 				<img
-					src="https://images.pexels.com/photos/2703202/pexels-photo-2703202.jpeg?auto=compress&cs=tinysrgb&w=1600"
-					alt="accessories-category"
+					src="./img/kids_category.jpeg"
+					alt="children-category"
 				/>
 				<button>
-					<Link to="/products/1" className="link">
-						Accessories
+					<Link className="link">
+						Children
 					</Link>
 				</button>
 			</div>
 			<div>
 				<img
-					src="https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg?auto=compress&cs=tinysrgb&w=1600"
+					src="./img/shoes_category.jpeg"
 					alt="shoes-category"
 				/>
 				<button>
-					<Link to="/products/1" className="link">
+					<Link className="link">
 						Shoes
 					</Link>
 				</button>
