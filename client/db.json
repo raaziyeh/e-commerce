@@ -1,4 +1,10 @@
 {
+	"slider": [
+		"./img/slider_1.jpeg",
+		"./img/slider_4.jpeg",
+		"./img/slider_2.jpeg",
+		"./img/slider_3.jpeg"
+	],
 	"women": [
 		{
 			"id": 1,
