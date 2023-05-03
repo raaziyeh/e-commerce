@@ -121,7 +121,16 @@
 	],
 	"Featured": [
 		{
-			"id": 13,
+			"id": 12,
+			"title": "green little dress",
+			"img": "/img/kids_4a.jpg",
+			"img2": "/img/kids_4b.jpg",
+			"oldPrice": 63,
+			"price": 55,
+			"new": true
+		},
+		{
+			"id": 1,
 			"title": "red blouse",
 			"img": "/img/women_1a.jpg",
 			"img2": "/img/women_1b.jpg",
@@ -130,7 +139,7 @@
 			"new": true
 		},
 		{
-			"id": 14,
+			"id": 6,
 			"title": "Jeans",
 			"img": "/img/men_2a.jpg",
 			"img2": "/img/men_2b.jpg",
@@ -138,26 +147,9 @@
 			"price": 59,
 			"new": true
 		},
+
 		{
-			"id": 15,
-			"title": "T-shirt",
-			"img": "/img/kids_3a.jpg",
-			"img2": "/img/kids_3b.jpg",
-			"oldPrice": 58,
-			"price": 49,
-			"new": false
-		},
-		{
-			"id": 16,
-			"title": "grey sweater",
-			"img": "/img/women_4a.jpg",
-			"img2": "/img/women_4b.jpg",
-			"oldPrice": 63,
-			"price": 55,
-			"new": false
-		},
-		{
-			"id": 17,
+			"id": 8,
 			"title": "suit",
 			"img": "/img/men_4a.jpg",
 			"img2": "/img/men_4b.jpg",
@@ -166,18 +158,27 @@
 			"new": true
 		},
 		{
-			"id": 18,
-			"title": "sweatpants and sweatshirt",
-			"img": "./img/single_product_first.jpeg",
-			"img2": "./img/single_product_second.jpeg",
+			"id": 9,
+			"title": "pink dress",
+			"img": "/img/kids_1a.jpg",
+			"img2": "/img/kids_1b.jpg",
 			"oldPrice": 47,
 			"price": 32,
-			"new": false
+			"new": true
+		},
+		{
+			"id": 6,
+			"title": "Jeans",
+			"img": "/img/men_2a.jpg",
+			"img2": "/img/men_2b.jpg",
+			"oldPrice": 68,
+			"price": 59,
+			"new": true
 		}
 	],
 	"Sale": [
 		{
-			"id": 19,
+			"id": 2,
 			"title": "skirt",
 			"img": "/img/women_2a.jpg",
 			"img2": "/img/women_2b.jpg",
@@ -186,7 +187,7 @@
 			"new": false
 		},
 		{
-			"id": 20,
+			"id": 10,
 			"title": "Jeans",
 			"img": "/img/kids_2a.jpg",
 			"img2": "/img/kids_2b.jpg",
@@ -195,7 +196,7 @@
 			"new": false
 		},
 		{
-			"id": 21,
+			"id": 3,
 			"title": "pink hoodie",
 			"img": "/img/women_3a.jpg",
 			"img2": "/img/women_3b.jpg",
@@ -204,31 +205,32 @@
 			"new": true
 		},
 		{
-			"id": 22,
-			"title": "suit",
-			"img": "/img/men_4a.jpg",
-			"img2": "/img/men_4b.jpg",
-			"oldPrice": 63,
-			"price": 55,
-			"new": true
+			"id": 11,
+			"title": "T-shirt",
+			"img": "/img/kids_3a.jpg",
+			"img2": "/img/kids_3b.jpg",
+			"oldPrice": 58,
+			"price": 49,
+			"new": false
 		},
 		{
-			"id": 23,
+			"id": 4,
+			"title": "grey sweater",
+			"img": "/img/women_4a.jpg",
+			"img2": "/img/women_4b.jpg",
+			"oldPrice": 63,
+			"price": 55,
+			"new": false
+		},
+
+		{
+			"id": 5,
 			"title": "T-shirt",
 			"img": "/img/men_1a.jpg",
 			"img2": "/img/men_1b.jpg",
 			"oldPrice": 47,
 			"price": 32,
 			"new": false
-		},
-		{
-			"id": 24,
-			"title": "green little dress",
-			"img": "/img/kids_4a.jpg",
-			"img2": "/img/kids_4b.jpg",
-			"oldPrice": 63,
-			"price": 55,
-			"new": true
 		}
 	],
 	"products": [
@@ -333,114 +335,6 @@
 		},
 		{
 			"id": 12,
-			"title": "green little dress",
-			"img": "/img/kids_4a.jpg",
-			"img2": "/img/kids_4b.jpg",
-			"oldPrice": 63,
-			"price": 55,
-			"new": true
-		},
-		{
-			"id": 13,
-			"title": "red blouse",
-			"img": "/img/women_1a.jpg",
-			"img2": "/img/women_1b.jpg",
-			"oldPrice": 47,
-			"price": 32,
-			"new": true
-		},
-		{
-			"id": 14,
-			"title": "Jeans",
-			"img": "/img/men_2a.jpg",
-			"img2": "/img/men_2b.jpg",
-			"oldPrice": 68,
-			"price": 59,
-			"new": true
-		},
-		{
-			"id": 15,
-			"title": "T-shirt",
-			"img": "/img/kids_3a.jpg",
-			"img2": "/img/kids_3b.jpg",
-			"oldPrice": 58,
-			"price": 49,
-			"new": false
-		},
-		{
-			"id": 16,
-			"title": "grey sweater",
-			"img": "/img/women_4a.jpg",
-			"img2": "/img/women_4b.jpg",
-			"oldPrice": 63,
-			"price": 55,
-			"new": false
-		},
-		{
-			"id": 17,
-			"title": "suit",
-			"img": "/img/men_4a.jpg",
-			"img2": "/img/men_4b.jpg",
-			"oldPrice": 63,
-			"price": 55,
-			"new": true
-		},
-		{
-			"id": 18,
-			"title": "sweatpants and sweatshirt",
-			"img": "./img/single_product_first.jpeg",
-			"img2": "./img/single_product_second.jpeg",
-			"oldPrice": 47,
-			"price": 32,
-			"new": false
-		},
-		{
-			"id": 19,
-			"title": "skirt",
-			"img": "/img/women_2a.jpg",
-			"img2": "/img/women_2b.jpg",
-			"oldPrice": 68,
-			"price": 59,
-			"new": false
-		},
-		{
-			"id": 20,
-			"title": "Jeans",
-			"img": "/img/kids_2a.jpg",
-			"img2": "/img/kids_2b.jpg",
-			"oldPrice": 68,
-			"price": 59,
-			"new": false
-		},
-		{
-			"id": 21,
-			"title": "pink hoodie",
-			"img": "/img/women_3a.jpg",
-			"img2": "/img/women_3b.jpg",
-			"oldPrice": 58,
-			"price": 49,
-			"new": true
-		},
-		{
-			"id": 22,
-			"title": "suit",
-			"img": "/img/men_4a.jpg",
-			"img2": "/img/men_4b.jpg",
-			"oldPrice": 63,
-			"price": 55,
-			"new": true
-		},
-		{
-			"id": 23,
-			"title": "skirt",
-			"img": "/img/women_2a.jpg",
-			"img2": "/img/women_2b.jpg",
-			"oldPrice": 68,
-			"price": 59,
-			"new": false
-		},
-		{
-			"id": 24,
 			"title": "green little dress",
 			"img": "/img/kids_4a.jpg",
 			"img2": "/img/kids_4b.jpg",
