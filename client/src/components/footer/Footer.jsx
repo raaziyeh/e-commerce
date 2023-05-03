@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 import "./Footer.scss"
 
 const Footer = () => {
+	function scrollToTop() {
+		console.log("d")
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		})
+	}
+
 	return (
 		<div className="footer">
 			<div className="top">
@@ -25,19 +34,25 @@ const Footer = () => {
 					<h5>Categories</h5>
 					<ul>
 						<li>
-							<Link to="/products/1">Women</Link>
+							<Link to="/products/women">
+								<span onClick={scrollToTop}> Women</span>
+							</Link>
 						</li>
 						<li>
-							<Link to="/products/2">Men</Link>
+							<Link to="/products/men">
+								<span onClick={scrollToTop}>Men</span>
+							</Link>
 						</li>
 						<li>
-							<Link>Shoes</Link>
+							<Link to="/products/kids">
+								<span onClick={scrollToTop}> Children</span>
+							</Link>
 						</li>
 						<li>
-							<Link>Accessories</Link>
+							<HashLink to="/#featured">Featured Products</HashLink>
 						</li>
 						<li>
-							<Link>New Arrivals</Link>
+							<HashLink to="/#sale">Sale</HashLink>
 						</li>
 					</ul>
 				</div>

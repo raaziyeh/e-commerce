@@ -4,7 +4,6 @@ import Products from "./pages/products/Products"
 import Product from "./pages/product/Product"
 import Navbar from "./components/navbar/Navbar"
 import Footer from "./components/footer/Footer"
-import SmoothScrollToTop from "./utils/SmoothScrollToTop"
 import "./app.scss"
 
 const Layout = () => {
@@ -12,9 +11,7 @@ const Layout = () => {
 		<div className="app">
 			<Navbar />
 			<Outlet />
-			<SmoothScrollToTop>
-				<Footer />
-			</SmoothScrollToTop>
+			<Footer />
 		</div>
 	)
 }
