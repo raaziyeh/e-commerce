@@ -26,6 +26,7 @@ const Navbar = () => {
 
 	const openMobileNav = () => {
 		setIsMobileNavOpen(true)
+		setIsCartOpen(false)
 	}
 
 	useEffect(() => {
@@ -73,7 +74,7 @@ const Navbar = () => {
 							<FavoriteBorderOutlinedIcon />
 						</div>
 						<div
-							className="cart-icon nav-icon"
+							className="cart-icon nav-icon"							
 							onClick={() => setIsCartOpen((prev) => !prev)}
 						>
 							<ShoppingCartOutlinedIcon />
@@ -87,7 +88,10 @@ const Navbar = () => {
 
 				{/* Cart */}
 				{isCartOpen && (
-					<div className="cart-container">
+					<div
+						className="cart-container"
+						onMouseLeave={() => setIsCartOpen(false)}
+					>
 						<Cart />
 					</div>
 				)}
