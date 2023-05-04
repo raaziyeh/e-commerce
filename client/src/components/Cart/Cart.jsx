@@ -1,6 +1,6 @@
-import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline"
 import { useSelector, useDispatch } from "react-redux"
-import { resetCart, deleteFromCart } from "../../redux/cartReducer"
+import { resetCart } from "../../redux/cartReducer"
+import CartCounter from "./CartCounter"
 import "./Cart.scss"
 
 const Cart = () => {
@@ -23,17 +23,16 @@ const Cart = () => {
 							return (
 								<div className="cart-item" key={item.id}>
 									<img src={item.img} alt={item.title} />
-									<div className="cart-details">
-										<span className="name">{item.title}</span>
-										<p> {item.desc?.substring(0, 100)}</p>
-										<div className="amount">
-											<span>{item.quantity}</span> × $<span>{item.price}</span>
+									<div className="cart-details-wrapper">
+										<div className="cart-details">
+											<span className="name">{item.title}</span>
+											<p> {item.desc?.substring(0, 100)}</p>
+											<div className="amount">
+												<span>${item.quantity * item.price}</span>
+											</div>
 										</div>
+										<CartCounter item={item} />
 									</div>
-									<DeleteOutlineIcon
-										className="delete"
-										onClick={() => dispatch(deleteFromCart(item.id))}
-									/>
 								</div>
 							)
 						})}
