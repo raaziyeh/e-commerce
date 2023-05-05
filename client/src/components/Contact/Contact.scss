@@ -1,32 +1,32 @@
 .contact {
 	width: 100%;
-	padding: 15px 15vw;
+	padding: 1rem 15vw;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	background-color: #2879fe;
 	color: white;
-	margin-top: 130px;
-	margin-bottom: 50px;
+	margin-top: 8rem;
+	margin-bottom: 3rem;
 
 	span {
-		font-size: 18px;
+		font-size: 1.125rem;
 		font-weight: 400;
 	}
 
 	form {
-		height: 32px;
+		height: 2rem;
 		display: flex;
 		align-items: center;
 		gap: 0;
 
 		input {
 			height: 100%;
-			padding: 10px 5px;
+			padding: 0.625rem 0.25rem;
 			border-radius: 4px 0 0 4px;
 			border: none;
 			outline: none;
-			width: 220px;
+			width: 15rem;
 		}
 
 		button {
@@ -34,11 +34,11 @@
 			align-items: center;
 			justify-content: center;
 			height: 100%;
-			padding: 10px 10px;
+			padding: 0.625rem;
 			background-color: #333;
 			color: white;
 			border-radius: 0 4px 4px 0;
-			font-size: 13px;
+			font-size: 0.875rem;
 			border: none;
 			cursor: pointer;
 		}
@@ -46,18 +46,23 @@
 
 	.socials {
 		display: flex;
-		gap: 10px;
+		gap: 0.8rem;
 
 		.icon {
-			font-size: 20px;
+			font-size: 1.25rem;
 			cursor: pointer;
+			transition: all 0.2s ease-out;
+
+			&:hover {
+				transform: scale(1.1);
+			}
 		}
 	}
 }
 
 @media (max-width: 1200px) {
 	.contact {
-		padding: 20px 5vw;
+		padding: 1.25rem 5vw;
 	}
 }
 
@@ -69,8 +74,8 @@
 
 @media (max-width: 480px) {
 	.contact {
-		padding: 30px;
+		padding: 2rem;
 		flex-direction: column;
-		gap: 20px;
+		gap: 1.25rem;
 	}
 }

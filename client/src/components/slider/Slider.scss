@@ -19,27 +19,27 @@
 	.arrows {
 		width: fit-content;
 		position: absolute;
-		bottom: 100px;
+		bottom: 6rem;
 		right: 0;
 		left: 0;
 		margin: auto;
 		display: flex;
 		justify-content: center;
-		gap: 10px;
+		gap: 0.75rem;
 
 		.arrow-wrapper {
 			color: #222;
 			border: 1px solid #999;
 			border-radius: 1px;
-			width: 30px;
-			height: 30px;
+			width: 2rem;
+			height: 2rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			cursor: pointer;
 
 			.arrow {
-				font-size: 14px;
+				font-size: 0.875rem;
 			}
 		}
 	}

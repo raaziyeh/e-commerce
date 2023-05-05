@@ -1,17 +1,17 @@
 .card {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
-	width: 290px;
-	height: 360px;
+	gap: 0.5rem;
+	width: 18.5rem;
+	height: 22.5rem;
 	position: relative;
-	margin-bottom: 50px;
+	margin-bottom: 3rem;
 
 	.badge {
 		position: absolute;
 		top: 5px;
 		left: 5px;
-		font-size: 12px;
+		font-size: 0.75rem;
 		font-weight: bold;
 		background-color: white;
 		color: teal;
@@ -42,23 +42,29 @@
 		}
 	}
 
-	h3 {
-		font-size: 16px;
-		font-weight: 400;
-	}
+	.card-body {
+		padding-left: 0.5rem;
 
-	.prices {
-		display: flex;
-		align-items: center;
-		gap: 30px;
-		font-size: 15px;
-		font-weight: bold;
-		color: #222;
-		letter-spacing: 0.5px;
+		h3 {
+			color: #222;
+			font-size: 1rem;
+			font-weight: 400;
+			margin-bottom: 0.25rem;
+		}
 
-		span:first-child {
-			color: gray;
-			text-decoration: line-through;
+		.prices {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			font-size: 1rem;
+			font-weight: bold;
+			color: #222;
+			letter-spacing: 0.5px;
+
+			span:first-child {
+				color: gray;
+				text-decoration: line-through;
+			}
 		}
 	}
 }

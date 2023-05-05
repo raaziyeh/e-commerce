@@ -1,11 +1,11 @@
 .list {
-	margin-top: 20px;
+	margin-top: 1.25rem;
 	display: flex;
 	justify-content: center;
-	gap: 20px;
+	gap: 1.25rem;
 	flex-wrap: wrap;
 
 	.list-card {
-		width: 250px;
+		width: 15rem;
 	}
 }

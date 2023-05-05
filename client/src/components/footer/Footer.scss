@@ -1,22 +1,22 @@
 .footer {
-	padding: 80px 90px 30px 90px;
+	padding: 5rem 5.5rem 2rem 5.5rem;
 
 	.top {
 		display: grid;
 		grid-template-columns: repeat(4, minmax(0, 1fr));
-		gap: 40px;
+		gap: 2.5rem;
 
 		div {
 			flex: 1;
 
 			h5 {
-				font-size: 18px;
-				margin-bottom: 20px;
+				font-size: 1.2rem;
+				margin-bottom: 1.25rem;
 				color: #555;
 			}
 
 			p {
-				font-size: 14px;
+				font-size: 0.875rem;
 				line-height: 1.5rem;
 				color: gray;
 			}
@@ -24,9 +24,9 @@
 			ul {
 				list-style: none;
 				li {
-					margin-bottom: 10px;
+					margin-bottom: 0.625rem;
 					color: gray;
-					font-size: 14px;
+					font-size: 0.875rem;
 				}
 			}
 		}
@@ -36,20 +36,20 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-top: 50px;
+		margin-top: 3rem;
 
 		.left {
 			span {
 				&:first-child {
-					font-size: 24px;
+					font-size: 1.5rem;
 					color: #2879fe;
 					font-weight: bold;
-					margin-right: 20px;
+					margin-right: 1.25rem;
 					letter-spacing: 1px;
 				}
 
 				&:last-child {
-					font-size: 12px;
+					font-size: 0.75rem;
 					color: gray;
 				}
 			}
@@ -57,7 +57,7 @@
 
 		.right {
 			img {
-				height: 50px;
+				height: 3rem;
 			}
 		}
 	}
@@ -65,7 +65,7 @@
 
 @media (max-width: 1200px) {
 	.footer {
-		padding: 50px 50px 30px 50px;
+		padding: 3rem 3rem 2rem 3rem;
 
 		.top {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -81,7 +81,7 @@
 
 @media (max-width: 600px) {
 	.footer {
-		padding: 30px;
+		padding: 2rem;
 		.top {
 			div {
 				&:nth-child(1),
@@ -101,7 +101,7 @@
 				span {
 					display: block;
 					&:first-child {
-						padding-bottom: 10px;
+						padding-bottom: 0.6rem;
 					}
 				}
 			}
