@@ -11,16 +11,24 @@ const Product = () => {
 	const [product, setProduct] = useState()
 	const [mainImg, setMainImg] = useState()
 	const [quantity, setQuantity] = useState(1)
-	const id = useParams().id
+	const id = +useParams().id
 	const dispatch = useDispatch()
 
 	useEffect(() => {
 		async function getProducts() {
-			const response = await fetch("http://localhost:3004/products")
-			const resData = await response.json()
-			const [matchedItem] = resData.filter((item) => item.id == id)
-			setMainImg(matchedItem.img)
-			setProduct(matchedItem)
+			try {
+				const response = await fetch("http://localhost:3004/products")
+				if (response.ok) {
+					const resData = await response.json()
+					const [matchedItem] = resData.filter((item) => item.id === id)
+					setMainImg(matchedItem.img)
+					setProduct(matchedItem)
+				}
+			} catch (error) {
+				console.log(
+					"There was something wrong with sending request. please try again later"
+				)
+			}
 		}
 		getProducts()
 	}, [id])
@@ -83,7 +91,7 @@ const Product = () => {
 					</div>
 					<button
 						className="add-to-cart"
-						onClick={() => dispatch(addToCart({...product, quantity}))}
+						onClick={() => dispatch(addToCart({ ...product, quantity }))}
 					>
 						<AddShoppingCartIcon />
 						ADD TO CART

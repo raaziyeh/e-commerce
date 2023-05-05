@@ -8,9 +8,17 @@ const FeaturedProducts = ({ title }) => {
 
 	useEffect(() => {
 		async function getProducts() {
-			const response = await fetch(`http://localhost:3004/${title}`)
-			const data = await response.json()
-			setProducts(data)
+			try {
+				const response = await fetch(`http://localhost:3004/${title}`)
+				if (response.ok) {
+					const data = await response.json()
+					setProducts(data)
+				}
+			} catch (error) {
+				console.log(
+					"There is something wrong with sending request, please try again later"
+				)
+			}
 		}
 
 		getProducts()
@@ -27,13 +35,14 @@ const FeaturedProducts = ({ title }) => {
 				</p>
 			</div>
 			<div className="bottom">
-				{products.length !== 0 && products.map((product) => (
-					<div key={product.id}>
-						<Link to={`/product/${product.id}`}>
-							<Card item={product} className="featured-card" />
-						</Link>
-					</div>
-				))}
+				{products.length !== 0 &&
+					products.map((product) => (
+						<div key={product.id}>
+							<Link to={`/product/${product.id}`}>
+								<Card item={product} className="featured-card" />
+							</Link>
+						</div>
+					))}
 			</div>
 		</div>
 	)

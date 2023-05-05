@@ -10,9 +10,17 @@ const List = (props) => {
 
 	useEffect(() => {
 		async function getProducts() {
-			const response = await fetch(`http://localhost:3004/${category}`)
-			const resData = await response.json()
-			setData(resData)
+			try {
+				const response = await fetch(`http://localhost:3004/${category}`)
+				if (response.ok) {
+					const resData = await response.json()
+					setData(resData)
+				}
+			} catch (error) {
+				console.log(
+					"There was something wrong with sending request. please try again later"
+				)
+			}
 		}
 
 		getProducts()
