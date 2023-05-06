@@ -7,6 +7,8 @@ const Slider = () => {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
 	const [images, setImages] = useState()
 
+	console.log(images)
+
 	useEffect(() => {
 		async function getImages() {
 			try {
