@@ -9,7 +9,9 @@ const FeaturedProducts = ({ title }) => {
 	useEffect(() => {
 		async function getProducts() {
 			try {
-				const response = await fetch(`http://localhost:3004/${title}`)
+				const response = await fetch(
+					`https://e-commerce-json-server.vercel.app/${title}`
+				)
 				if (response.ok) {
 					const data = await response.json()
 					setProducts(data)

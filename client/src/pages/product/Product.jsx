@@ -17,7 +17,9 @@ const Product = () => {
 	useEffect(() => {
 		async function getProducts() {
 			try {
-				const response = await fetch("http://localhost:3004/products")
+				const response = await fetch(
+					"https://e-commerce-json-server.vercel.app/products"
+				)
 				if (response.ok) {
 					const resData = await response.json()
 					const [matchedItem] = resData.filter((item) => item.id === id)

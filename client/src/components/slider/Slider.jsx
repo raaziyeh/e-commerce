@@ -10,7 +10,9 @@ const Slider = () => {
 	useEffect(() => {
 		async function getImages() {
 			try {
-				const response = await fetch("http://localhost:3004/slider")
+				const response = await fetch(
+					"https://e-commerce-json-server.vercel.app/slider"
+				)
 				if (response.ok) {
 					const data = await response.json()
 					setImages(data)

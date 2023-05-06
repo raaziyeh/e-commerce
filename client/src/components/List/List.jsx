@@ -11,7 +11,9 @@ const List = (props) => {
 	useEffect(() => {
 		async function getProducts() {
 			try {
-				const response = await fetch(`http://localhost:3004/${category}`)
+				const response = await fetch(
+					`https://e-commerce-json-server.vercel.app/${category}`
+				)
 				if (response.ok) {
 					const resData = await response.json()
 					setData(resData)
