@@ -20,6 +20,7 @@ const Home = () => {
 			</div>
 
 			<Categories />
+
 			<div id="sale">
 				<FeaturedProducts title="Sale" />
 			</div>

@@ -15,7 +15,6 @@ const Product = () => {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		console.log(id)
 		async function getProducts() {
 			try {
 				const response = await fetch(
@@ -42,7 +41,6 @@ const Product = () => {
 		}
 	}
 
-	console.log("here")
 	if (product) {
 		return (
 			<div className="product">

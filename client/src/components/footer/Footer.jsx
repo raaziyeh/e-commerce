@@ -4,7 +4,6 @@ import "./Footer.scss"
 
 const Footer = () => {
 	function scrollToTop() {
-		console.log("d")
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth",
