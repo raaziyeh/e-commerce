@@ -32,9 +32,9 @@ const List = (props) => {
 		<div className="list">
 			{data &&
 				data.map((item) => (
-					<div>
+					<div key={item.id}>
 						<Link to={`/product/${item.id}`}>
-							<Card item={item} key={item.id} className="list-card" />
+							<Card item={item} className="list-card" />
 						</Link>
 					</div>
 				))}

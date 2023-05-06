@@ -15,6 +15,7 @@ const Product = () => {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
+		console.log(id)
 		async function getProducts() {
 			try {
 				const response = await fetch(

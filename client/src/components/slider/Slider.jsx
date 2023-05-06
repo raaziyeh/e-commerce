@@ -1,31 +1,11 @@
 import EastIcon from "@mui/icons-material/East"
 import WestIcon from "@mui/icons-material/West"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import "./Slider.scss"
 
-const Slider = () => {
+const Slider = ({images}) => {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
-	const [images, setImages] = useState()
 
-	console.log(images)
-
-	useEffect(() => {
-		async function getImages() {
-			try {
-				const response = await fetch(
-					"https://e-commerce-json-server.vercel.app/slider"
-				)
-				if (response.ok) {
-					const data = await response.json()
-					setImages(data)
-				}
-			} catch(error) {
-				console.log("There is something wrong. please try again later")
-			}
-		}
-
-		getImages()
-	}, [])
 
 	const nextSlide = () => {
 		setCurrentSlideIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
