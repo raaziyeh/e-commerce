@@ -1,0 +1,22 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		margin-top: 10rem;
+
+		.status {
+			font-weight: bold;
+			color: red;
+		}
+
+		.link {
+			color: red;
+		}
+	}
+}

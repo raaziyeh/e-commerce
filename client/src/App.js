@@ -4,6 +4,7 @@ import Products from "./pages/products/Products"
 import Product from "./pages/product/Product"
 import Navbar from "./components/navbar/Navbar"
 import Footer from "./components/footer/Footer"
+import NotFound from "./pages/notFound/NotFound"
 import "./app.scss"
 
 const Layout = () => {
@@ -17,6 +18,7 @@ const Layout = () => {
 }
 
 const router = createBrowserRouter([
+	{ path: "*", element: <NotFound /> },
 	{
 		path: "/",
 		element: <Layout />,
