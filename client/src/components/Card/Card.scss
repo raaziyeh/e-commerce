@@ -6,7 +6,7 @@
 	height: 22.5rem;
 	position: relative;
 	margin-bottom: 3rem;
-
+	box-shadow: 0.5px 0px 10px rgba(0, 0, 0, 0.04);
 	.badge {
 		position: absolute;
 		top: 5px;
@@ -44,6 +44,7 @@
 
 	.card-body {
 		padding-left: 0.5rem;
+		padding-bottom: 0.5rem;
 
 		h3 {
 			color: #222;
