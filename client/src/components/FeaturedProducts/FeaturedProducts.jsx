@@ -1,30 +1,57 @@
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import BeatLoader from "react-spinners/BeatLoader"
 import Card from "../Card/Card"
 import "./FeaturedProducts.scss"
-import { useEffect, useState } from "react"
 
 const FeaturedProducts = ({ title }) => {
 	const [products, setProducts] = useState([])
+	const [isLoading, setIsLoading] = useState(false)
+	const [error, setError] = useState(null)
 
 	useEffect(() => {
 		async function getProducts() {
+			setIsLoading(true)
+			setError(null)
 			try {
 				const response = await fetch(
 					`https://e-commerce-json-server.vercel.app/${title}`
 				)
-				if (response.ok) {
-					const data = await response.json()
-					setProducts(data)
+
+				if (!response.ok) {
+					throw new Error("Something went wrong")
 				}
+
+				const data = await response.json()
+				setProducts(data)
 			} catch (error) {
-				console.log(
-					"There is something wrong with sending request, please try again later"
-				)
+				setError({ message: "Oops! Something went wrong." })
 			}
+			setIsLoading(false)
 		}
 
 		getProducts()
 	}, [title])
+
+	let content = ""
+
+	if (products && products.length > 0) {
+		content = products.map((product) => (
+			<div key={product.id}>
+				<Link to={`/product/${product.id}`}>
+					<Card item={product} className="featured-card" />
+				</Link>
+			</div>
+		))
+	}
+
+	if (error) {
+		content = <p>{error.message}</p>
+	}
+
+	if (isLoading) {
+		content = <BeatLoader color="#36d7b7" />
+	}
 
 	return (
 		<div className="featured-products">
@@ -36,16 +63,7 @@ const FeaturedProducts = ({ title }) => {
 					minim veniam, quis nostrud exercitation.
 				</p>
 			</div>
-			<div className="bottom">
-				{products.length !== 0 &&
-					products.map((product) => (
-						<div key={product.id}>
-							<Link to={`/product/${product.id}`}>
-								<Card item={product} className="featured-card" />
-							</Link>
-						</div>
-					))}
-			</div>
+			<div className="bottom">{content}</div>
 		</div>
 	)
 }

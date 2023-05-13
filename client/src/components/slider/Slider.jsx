@@ -14,10 +14,6 @@ const Slider = ({ images }) => {
 		setCurrentSlideIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
 	}
 
-	if (!images || images.length === 0) {
-		return <p>Loading ... </p>
-	}
-
 	return (
 		<div className="slider">
 			<div

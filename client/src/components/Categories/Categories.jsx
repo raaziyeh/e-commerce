@@ -1,29 +1,37 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import BeatLoader from "react-spinners/BeatLoader"
 import "./Categories.scss"
 
 const Categories = () => {
 	const [categoriesImages, setCategoriesImages] = useState()
+	const [isLoading, setIsLoading] = useState(false)
+	const [error, setError] = useState(null)
 
 	useEffect(() => {
 		async function getCategoriesImages() {
+			setIsLoading(true)
+			setError(null)
 			try {
 				const response = await fetch(
 					"https://e-commerce-json-server.vercel.app/categories"
 				)
 
-				if (response.ok) {
-					const responseDate = await response.json()
-					setCategoriesImages(responseDate)
+				if (!response.ok) {
+					throw new Error("Something went wrong!")
 				}
+
+				const responseDate = await response.json()
+				setCategoriesImages(responseDate)
 			} catch (error) {
-				console.error(error)
+				setError({ message: "Oops! Something went wrong." })
 			}
+			setIsLoading(false)
 		}
 		getCategoriesImages()
 	}, [])
 
-	if (categoriesImages) {
+	if (categoriesImages && Object.keys(categoriesImages).length > 0) {
 		const { kids, men, season, shoes, trending, women } = categoriesImages
 		return (
 			<div className="categories">
@@ -71,6 +79,14 @@ const Categories = () => {
 				</div>
 			</div>
 		)
+	}
+
+	if (error) {
+		return <p>{error.message}</p>
+	}
+
+	if (isLoading) {
+		return <BeatLoader color="#36d7b7" />
 	}
 }
 
