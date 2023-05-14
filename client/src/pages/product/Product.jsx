@@ -6,39 +6,28 @@ import { useParams } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import BeatLoader from "react-spinners/BeatLoader"
 import { addToCart } from "../../redux/cartReducer"
+import useHttp from "../../hooks/use-http"
 import "./Product.scss"
 
 const Product = () => {
 	const [product, setProduct] = useState()
 	const [mainImg, setMainImg] = useState()
 	const [quantity, setQuantity] = useState(1)
-	const [isLoading, setIsLoading] = useState(false)
-	const [error, setError] = useState(null)
+	const { isLoading, error, sendRequest: getProducts } = useHttp()
 	const id = +useParams().id
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		async function getProducts() {
-			setIsLoading(true)
-			setError(null)
-			try {
-				const response = await fetch(
-					"https://e-commerce-json-server.vercel.app/products"
-				)
-				if (!response.ok) {
-					throw new Error("Something went wrong!")
-				}
-				const resData = await response.json()
-				const [matchedItem] = resData.filter((item) => item.id === id)
-				setMainImg(matchedItem.img)
-				setProduct(matchedItem)
-			} catch (error) {
-				setError({ message: "Oops! Something went wrong." })
-			}
-			setIsLoading(false)
+		const responseDataHandler = (resData) => {
+			const [matchedItem] = resData.filter((item) => item.id === id)
+			setMainImg(matchedItem.img)
+			setProduct(matchedItem)
 		}
-		getProducts()
-	}, [id])
+		getProducts(
+			{ url: "https://e-commerce-json-server.vercel.app/products" },
+			responseDataHandler
+		)
+	}, [id, getProducts])
 
 	const changeImageHandler = (imgSrc) => {
 		if (mainImg !== imgSrc) {

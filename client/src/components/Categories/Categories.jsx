@@ -1,35 +1,21 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import BeatLoader from "react-spinners/BeatLoader"
+import useHttp from "../../hooks/use-http"
 import "./Categories.scss"
 
 const Categories = () => {
 	const [categoriesImages, setCategoriesImages] = useState()
-	const [isLoading, setIsLoading] = useState(false)
-	const [error, setError] = useState(null)
+	const { isLoading, error, sendRequest: getCategoriesImages } = useHttp()
 
 	useEffect(() => {
-		async function getCategoriesImages() {
-			setIsLoading(true)
-			setError(null)
-			try {
-				const response = await fetch(
-					"https://e-commerce-json-server.vercel.app/categories"
-				)
-
-				if (!response.ok) {
-					throw new Error("Something went wrong!")
-				}
-
-				const responseDate = await response.json()
-				setCategoriesImages(responseDate)
-			} catch (error) {
-				setError({ message: "Oops! Something went wrong." })
-			}
-			setIsLoading(false)
-		}
-		getCategoriesImages()
-	}, [])
+		getCategoriesImages(
+			{
+				url: "https://e-commerce-json-server.vercel.app/categories",
+			},
+			(responseDate) => setCategoriesImages(responseDate)
+		)
+	}, [getCategoriesImages])
 
 	if (categoriesImages && Object.keys(categoriesImages).length > 0) {
 		const { kids, men, season, shoes, trending, women } = categoriesImages

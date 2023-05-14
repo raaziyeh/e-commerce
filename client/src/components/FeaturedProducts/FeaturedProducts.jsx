@@ -1,37 +1,20 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import BeatLoader from "react-spinners/BeatLoader"
+import useHttp from "../../hooks/use-http"
 import Card from "../Card/Card"
 import "./FeaturedProducts.scss"
 
 const FeaturedProducts = ({ title }) => {
 	const [products, setProducts] = useState([])
-	const [isLoading, setIsLoading] = useState(false)
-	const [error, setError] = useState(null)
+	const { isLoading, error, sendRequest: getProducts } = useHttp()
 
 	useEffect(() => {
-		async function getProducts() {
-			setIsLoading(true)
-			setError(null)
-			try {
-				const response = await fetch(
-					`https://e-commerce-json-server.vercel.app/${title}`
-				)
-
-				if (!response.ok) {
-					throw new Error("Something went wrong")
-				}
-
-				const data = await response.json()
-				setProducts(data)
-			} catch (error) {
-				setError({ message: "Oops! Something went wrong." })
-			}
-			setIsLoading(false)
-		}
-
-		getProducts()
-	}, [title])
+		getProducts(
+			{ url: `https://e-commerce-json-server.vercel.app/${title}` },
+			(data) => setProducts(data)
+		)
+	}, [getProducts, title])
 
 	let content = ""
 

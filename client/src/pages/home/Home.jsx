@@ -4,33 +4,18 @@ import Slider from "../../components/slider/Slider"
 import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts"
 import Categories from "../../components/Categories/Categories"
 import Contact from "../../components/Contact/Contact"
+import useHttp from "../../hooks/use-http"
 
 const Home = () => {
 	const [mainSliderImages, setMainSliderImages] = useState()
-	const [isLoading, setIsLoading] = useState(false)
-	const [error, setError] = useState(null)
+	const { isLoading, error, sendRequest: getSliderImages } = useHttp()
 
 	useEffect(() => {
-		async function getSliderImages() {
-			setIsLoading(true)
-			setError(null)
-			try {
-				const response = await fetch(
-					"https://e-commerce-json-server.vercel.app/slider"
-				)
-				if (!response.ok) {
-					throw new Error("Something went wrong!")
-				}
-				const responseData = await response.json()
-				setMainSliderImages(responseData)
-			} catch (error) {
-				setError({ message: "Oops! Something went wrong." })
-			}
-			setIsLoading(false)
-		}
-
-		getSliderImages()
-	}, [])
+		getSliderImages(
+			{ url: "https://e-commerce-json-server.vercel.app/slider" },
+			(data) => setMainSliderImages(data)
+		)
+	}, [getSliderImages])
 
 	let content = ""
 
