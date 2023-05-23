@@ -11,7 +11,7 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined"
 import StoreOutlinedIcon from "@mui/icons-material/StoreOutlined"
 import HeadsetMicOutlinedIcon from "@mui/icons-material/HeadsetMicOutlined"
-import Cart from "../Cart/Cart"
+import Cart from "../../Cart/Cart"
 import { useSelector } from "react-redux"
 import "./Navbar.scss"
 

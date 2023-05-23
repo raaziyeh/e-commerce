@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useParams } from "react-router-dom"
-import List from "../../components/List/List"
+import List from "../../components/ProductsPageComponents/List/List"
 import TuneOutlinedIcon from "@mui/icons-material/TuneOutlined"
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined"
 import "./Products.scss"

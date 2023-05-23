@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 import BeatLoader from "react-spinners/BeatLoader"
-import Slider from "../../components/slider/Slider"
-import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts"
-import Categories from "../../components/Categories/Categories"
-import Contact from "../../components/Contact/Contact"
+import Slider from "../../components/UI/Slider/Slider"
+import FeaturedProducts from "../../components/HomePageComponents/FeaturedProducts/FeaturedProducts"
+import Categories from "../../components/HomePageComponents/Categories/Categories"
+import Contact from "../../components/HomePageComponents/Contact/Contact"
 import useHttp from "../../hooks/use-http"
 
 const Home = () => {

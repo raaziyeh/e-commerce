@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import BeatLoader from "react-spinners/BeatLoader"
-import Card from "../Card/Card"
-import useHttp from "../../hooks/use-http"
+import Card from "../../UI/Card/Card"
+import useHttp from "../../../hooks/use-http"
 import "./List.scss"
 
 const List = (props) => {

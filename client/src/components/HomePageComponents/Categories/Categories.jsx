@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import BeatLoader from "react-spinners/BeatLoader"
-import useHttp from "../../hooks/use-http"
+import useHttp from "../../../hooks/use-http"
 import "./Categories.scss"
 
 const Categories = () => {
