@@ -1,6 +1,4 @@
 .slider {
-	width: 100%;
-	height: calc(100vh - 80px);
 	position: relative;
 	overflow: hidden;
 
@@ -10,7 +8,7 @@
 		transition: all 1s ease;
 
 		img {
-			width: 100vw;
+			width: 100%;
 			height: 100%;
 			object-fit: fill;
 		}
@@ -19,9 +17,9 @@
 	.arrows {
 		width: fit-content;
 		position: absolute;
-		bottom: 6rem;
 		right: 0;
 		left: 0;
+		bottom: 10%;
 		margin: auto;
 		display: flex;
 		justify-content: center;

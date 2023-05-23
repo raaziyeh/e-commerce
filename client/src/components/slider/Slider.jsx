@@ -3,8 +3,10 @@ import WestIcon from "@mui/icons-material/West"
 import { useState } from "react"
 import "./Slider.scss"
 
-const Slider = ({ images }) => {
+const Slider = ({ images, widthValue, widthUnit, height }) => {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
+	const transformedWidth = `calc(${widthValue}${widthUnit})`
+	const transformedHeight = `calc(${height})`	
 
 	const nextSlide = () => {
 		setCurrentSlideIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
@@ -15,12 +17,12 @@ const Slider = ({ images }) => {
 	}
 
 	return (
-		<div className="slider">
+		<div className="slider" style={{ width: transformedWidth, height: transformedHeight}}>
 			<div
 				className="container"
 				style={{
-					width: `${100 * images.length}vw`,
-					transform: `translateX(-${currentSlideIndex * 100}vw)`,
+					width: `${widthValue * images.length}${widthUnit}`,
+					transform: `translateX(-${currentSlideIndex * widthValue}${widthUnit})`,
 				}}
 			>
 				{images.map((img) => (

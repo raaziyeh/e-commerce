@@ -20,7 +20,13 @@ const Home = () => {
 	let content = ""
 
 	if (mainSliderImages && mainSliderImages.length > 0) {
-		content = <Slider images={mainSliderImages} />
+		const sliderConfig = {
+			height: "100vh - 5rem",
+			widthValue: "100",
+			widthUnit: "vw"
+		}
+
+		content = <Slider images={mainSliderImages} {...sliderConfig}/>
 	}
 
 	if (error) {
